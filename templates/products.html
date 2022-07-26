@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Sneakers BOOM</title>
+{% endblock %}
+
+{% block body %}
+
+    <div class="bg-dark text-secondary px-4 py-5 text-center">
+        <div class="py-5">
+          <h1 class="display-5 fw-bold text-white">Catalog Sneakers BOOM</h1>
+          <div class="mx-auto">
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                  {% for el in data %}
+                <div class="card text-center text-white bg-info mb-3" style="width: 18rem;">
+                    <img class="card-img-top" src="static/cortez-removebg-preview.png" alt="Product">
+                    <div class="card-body">
+                        <h2 class="pt-1 mt-1 mb-4 display-6 lh-1 fw-bold">{{el}}</h2>
+                        <a href="/buy/{{ el.id }}" class="w-100 btn btn-lg btn btn-light">Buy ${{el.price}}</a>
+                    </div>
+                </div>
+                {% endfor %}
+              </div>
+          </div>
+        </div>
+    </div>
+
+
+{% endblock %}

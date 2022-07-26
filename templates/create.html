@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Add product</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="bg-dark text-white px-4 py-5 text-center">
+            <div class="py-5">
+                <h1>Add new product</h1>
+                    <form method="post">
+                        <input type="text" class="form-control" name="title" id="title" placeholder="Enter title"><br>
+                        <input type="number" class="form-control" name="price" id="price" placeholder="Enter price"><br>
+                        <button class="btn btn-outline-info btn-lg px-4 me-sm-3 fw-bold" type="submit">Add</button>
+                    </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

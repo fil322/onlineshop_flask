@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    {% block title %} {% endblock %}
+</head>
+
+<body>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="check" viewBox="0 0 16 16">
+    <title>Check</title>
+    <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"></path>
+  </symbol>
+</svg>
+
+<div class="container py-3">
+  <header class="p-3 mb-2 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
+          <li><a href="/products" class="nav-link px-2 text-white">Products</a></li>
+          <li><a href="/about" class="nav-link px-2 text-white">About</a></li>
+        </ul>
+
+
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="img">
+          <img class="card-img-top" width="100" height="50" src="static/cortez-removebg-preview.png" alt="Product">
+        </form>
+
+        <div class="text-end">
+          <a class="btn btn-outline-info btn-lg px-2 me-sm-1 fw-bold" href="/create" role="button">Add product</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    {% block body %} {% endblock %}
+
+  <div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/yauhenifilipchanka"><svg class="bi" width="40" height="40"><use xlink:href="#facebook"></use></svg><svg style="display: none;">
+        <symbol id="facebook" viewBox="0 0 50 50">
+          <path d="M33.9,43.1h-7.4V25h-3.7v-6.3h3.7V15c0-5.1,2.1-8.1,8.1-8.1h5v6.3h-3.1c-2.3,0-2.5,0.9-2.5,2.5l0,3.1h5.6L38.9,25h-5 L33.9,43.1L33.9,43.1z"/>
+        </symbol></svg></a>
+      </li>
+      <li class="ms-3"><a class="text-muted" href="https://twitter.com/fil3222"><svg class="bi" width="40" height="40"><use xlink:href="#twitter"></use></svg><svg style="display: none;">
+        <symbol id="twitter" viewBox="0 0 50 50">
+          <path d="M40.9,14.5c-1.2,0.5-2.4,0.9-3.7,1c1.3-0.8,2.4-2.1,2.9-3.6c-1.3,0.7-2.6,1.3-4.1,1.6 c-1.2-1.3-2.9-2.1-4.7-2.1c-3.6,0-6.5,2.9-6.5,6.5c0,0.5,0.1,1,0.2,1.5c-5.4-0.3-10.2-2.9-13.4-6.8c-0.6,1-0.9,2.1-0.9,3.3 c0,2.3,1.1,4.2,2.9,5.4c-1.1,0-2.1-0.3-2.9-0.8c0,0,0,0.1,0,0.1c0,3.2,2.2,5.8,5.2,6.4c-0.5,0.1-1.1,0.2-1.7,0.2
+             c-0.4,0-0.8,0-1.2-0.1c0.8,2.6,3.2,4.5,6.1,4.5c-2.2,1.7-5,2.8-8.1,2.8c-0.5,0-1,0-1.6-0.1c2.9,1.8,6.3,2.9,10,2.9 c12,0,18.5-9.9,18.5-18.5c0-0.3,0-0.6,0-0.8C38.9,17,40,15.9,40.9,14.5z"/>
+        </symbol></svg></a>
+      </li>
+      <li class="ms-3"><a class="text-muted" href="https://www.linkedin.com/in/yauheni-filipchanka-9b9003229/"><svg class="bi" width="40" height="40"><use xlink:href="#linkedin"></use></svg><svg style="display: none;">
+         <symbol id="linkedin" viewBox="0 0 50 50">
+          <path d="M11,37.4V19.1h6.1v18.3H11z M14.1,16.6L14.1,16.6c-2.1,0-3.4-1.4-3.4-3.1s1.3-3.1,3.4-3.1s3.4,1.4,3.4,3.1
+             S16.2,16.6,14.1,16.6L14.1,16.6z"/>
+           <path id="path30" d="M20.4,37.4c0,0,0.1-16.6-0.1-18.4h6.1v2.7l0,0c0.8-1.2,2.2-3,5.5-3c4.1,0,7,2.6,7,8.2v10.5h-6.1v-9.8 c0-2.5-0.8-4.2-3-4.2c-1.7,0-2.7,1.1-3.1,2.2c-0.2,0.4-0.2,0.9-0.2,1.5v10.3H20.4L20.4,37.4z"/>
+         </symbol></svg></a>
+      </li>
+    </ul>
+  </footer>
+  </div>
+
+</body>
+</html>
